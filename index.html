@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang=" en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NLP Class Project - GorillaChow | Fall 2024 CSCI 5541 | University of Minnesota</title>
+
+  <link rel="stylesheet" href="./files/bulma.min.css" />
+
+  <link rel="stylesheet" href="./files/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="./files/css2" rel="stylesheet">
+  <link href="./files/css" rel="stylesheet">
+
+
+  <base href="." target="_blank"></head>
+
+
+<body>
+  <div>
+    <div class="wrapper">
+      <h1 style="font-family: &#39;Lato&#39;, sans-serif;">Tailored Music Recommendations from Natural Language Prompts</h1>
+      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">Fall 2024 CSCI 5541 NLP: Class Project - University of Minnesota</h4>
+      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">GorillaChow</h4>
+
+      <div class="authors-wrapper">
+        
+        <div class="author-container">
+          <!-- <div class="author-image">
+                        
+              <img src="">
+            
+            
+          </div> -->
+          <p>
+                        
+              Issac Blumhoefer
+            
+          </p>
+        </div>
+        
+        <div class="author-container">
+          <!-- <div class="author-image">
+            
+            <img src="">
+            
+          </div> -->
+          <p>
+            
+            Elijah Carlson
+            
+          </p>
+        </div>
+        
+        <div class="author-container">
+          <!-- <div class="author-image">
+            
+              <img src="">            
+            
+          </div> -->
+          <p>
+              Lucas Harrison
+          </p>
+        </div>
+        
+        <div class="author-container">
+          <!-- <div class="author-image">
+                        
+              <img src="">
+            
+          </div> -->
+          <p>
+            Charles Hart
+          </p>
+        </div>
+        
+      </div>
+
+      <br/>
+
+      <div class="authors-wrapper">
+        <div class="publication-links">
+          <!-- Github link -->
+          <span class="link-block">
+            <a
+              href=""
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark is-outlined"
+            >
+            <span>Final Report</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a
+              href="https://github.umn.edu/Hart1299/CSCI5541-Project/tree/main"
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark is-outlined"
+            >
+            <span>Code</span>
+            </a>
+          </span>      
+          <span class="link-block">
+            <a
+              href=""
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark is-outlined"
+            >
+            <span>Model Weights</span>
+            </a>
+          </span>              
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+  
+  
+
+
+  <div class="wrapper">
+    <hr>
+    
+    <h2 id="abstract">Abstract</h2>
+
+<p>We wanted to create a novel application that would recommend songs and music playlists based on user prompts. While Spotify came out with a similar feature recently, we wanted to create an application that more readily understands the user prompt. 
+  We used MU-LLaMA to decipher the music audio in our datasets and create natural language prompts from that. We then used the Gemini API to decipher the prompts and recommend songs and playlists based on that. We do not have results yet.</p>
+  
+
+<hr>
+
+<p class="sys-img"><img src="./files/app_diagram.png" alt="imgname"></p>
+
+
+<!-- <h3 id="the-timeline-and-the-highlights">Any subsection</h3>
+
+<p>If you need to explain more about your figure</p>
+
+<hr> -->
+
+<h2 id="introduction">Introduction / Background / Motivation</h2>
+
+<p>
+<b>What we are trying to do</b>
+</p>
+<p>
+We want to create an application that would recommend songs and music playlists based on user prompts, wanting to create a more personalized and tailored experience for the user.
+We also wanted to discover what kind of music our application thought very abstract prompts would sound like. 
+For example, what would a song sound like if it was based on the prompt "a song that sounds like a sunset"?
+Our goal is to create something that is not affected by the user's listening history, and is more based on the prompt itself, while being able to handle more abstract prompts and hopefully return sensible songs.
+</p>
+
+<p>
+<b>How is it done today, and what are the limits of current practice?</b>
+</p>
+<p>
+Spotify has a new feature that recommends songs and playlists based on user listening history and song titles. 
+However, the recommendations that Spotify gives are not very in-depth, and a lot of the recommendations are based on the user's listening history and song titles.
+Becuase of this, the songs they provide are not going to "catch the vibe" as it where, of the prompt given if the prompt is too abstract.
+There have also been plenty of studies looking into music recommendation systems, but there are still a few gaps in the research.
+For one, there is not much work on handeling conext based prompts, and the integration of lyrical sentiment analysis with audio feature analysis has not been fully explored.
+</p>
+<p>
+Obviously, with very abstract prompts it is extremely hard if not impossible to say whether or not a song is a good recommendation.
+Thus, there is a limit as to what can be expected from a music recommendation system. 
+Furthermore, music is a very subjective media, and because of this people will not like the songs that are recommended to them, while others may.
+It seems highly unlikely that we will se a music recommendation system that can perfectly predict what a user will like and wants in our lifetime.
+</p>
+</p>
+
+<p>
+<b>Why should you care?</b>
+</p>
+<p>
+If we succeed, we will have created a music recommendation system that can handle more abstract prompts and return sensible songs.
+This could help people discover new music that they would not have found otherwise, and help people create playlists for momements in their life with more ease.
+Our application will be able to capture more complex and metaphorical ideas than current music recommendation systems, and thus be able to recommend songs that are more in line with the user's intent.
+This will open up new possibilities for how people listen to music, allowing unfamiliar songs and artists to be discovered based on emotions and environment rather than just listening history.
+</p>
+
+<hr>
+
+<h2 id="approach">Approach</h2>
+
+<p>
+<b>What did you do exactly? How did you solve the problem? Why did you think it would be successful? Is anything new in your approach?</b>
+</p>
+
+<p>
+Our application was created with a simple enough pipline in mind. 
+First, we take the prompt given by the user and use a model to derive musical qualities and descriptors from it.
+Then we take the parsed descriptors and map them onto both audio a lyrical data using a seperate model which extracts similar qualities and descriptors from the music dataset.
+We thought this would be successful as integrating both lyrical and audio features would give us a more complete picture of the music, and thus a better recommendation. 
+As for handeling abstract prompts, by parsing natural language into musical features, our application will be able to more readily understand the intent of the prompt.
+
+</p>
+
+<p>
+<b>What problems did you anticipate? What problems did you encounter? Did the very first thing you tried work?</b>
+</p>
+
+<p>
+TBD
+</p>
+
+<hr>
+    
+<h2 id="results">Results</h2>
+<p>
+<b>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</b>
+</p>
+<p>
+TBD
+</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Experiment</strong></th>
+      <th style="text-align: center">1</th>
+      <th style="text-align: center">2</th>
+      <th style="text-align: center">3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Sentence</strong></td>
+      <td style="text-align: center">Example 1</td>
+      <td style="text-align: center">Example 2</td>
+      <td style="text-align: center">Example 3</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Errors</strong></td>
+      <td style="text-align: center">error A, error B, error C</td>
+      <td style="text-align: center">error C</td>
+      <td style="text-align: center">error B</td>
+    </tr>
+  </tbody>
+  <caption>Table 1. This is Table 1's caption</caption>
+</table>
+<br>
+<div style="text-align: center;">
+<img style="height: 300px;" alt="" src="./files/results.png">
+</div>
+<br><br>
+
+<hr>
+
+
+
+<h2 id="conclusion">Conclusion and Future Work</h2>
+<p>
+  TBD - want to wait until we have a working applicaiton
+
+  <!-- How easily are your results able to be reproduced by others?
+  Did your dataset or annotation affect other people's choice of research or development projects to undertake?
+  Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?
+  What limitations does your model have? How can you extend your work for future research? -->
+
+</p>
+
+<hr>
+
+
+  </div>
+  
+
+
+</body></html>
