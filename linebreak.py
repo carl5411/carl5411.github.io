@@ -1,6 +1,0 @@
-text = "Here is a list of all the capitals of the United States, including dates:\n\nNew York, York County, Pennsylvania September 1777–January 1778 (Continental Congress met at York)\n\nLancaster, Pennsylvania January 1777 (Confederation Congress met for one day)\n\nYork, Pennsylvania September 1777–June 1778\n\nPhiladelphia, Pennsylvania July 1778–1783 (de facto capital, Continental Congress)\n\nPrinceton, New Jersey June 1783 (Confederation Congress)\n\nTrenton, New Jersey November 1784–December 1784\n\nNew York City, New York 1785–1790 (Confederation Congress, then Federal Government under the new Constitution)\n\nPhiladelphia, Pennsylvania 1790–1800\n\nWashington, D.C. 1800–present\n\nIt is worth noting that from 1785 to 1790, New York City served as the capital under the Articles of Confederation, and from 1790 onward, it has been Washington, D.C., under the new Constitution. The other locations were temporary meeting places for the Continental or Confederation Congresses during the American Revolution and the early years of the nation."
-
-for x in text:
-    x.replace("\n", " ")
-
-print(text)
