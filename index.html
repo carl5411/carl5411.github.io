@@ -143,10 +143,10 @@
 
 <p>
   We wanted to create a novel application that would recommend songs and music playlists based on user prompts. 
-  While Spotify came out with a similar feature recently, we wanted to create an application that more readily understands the user prompt. 
-  We used Qwen to decipher the music audio in our datasets and extract musical features. 
+  While Spotify came out with a similar feature recently, we wanted to create an application that reads into the user's prompt more deeply. 
+  Qwen2-Audio was used to decipher the songs in our datasets and extract musical features. 
   We then used the Gemini API to interpret the human prompts to extract similar features from that, 
-  and we also gathered some feedback to help train the model. 
+  and we also gathered some feedback to help in training the model. 
   Currently, a working demo is available (above) that can take a user prompt and return a song recommendation based on that prompt.
   Our results show that our model is capable of creating playlists that are somewhat consistent with the user's intent,
   though it seems that, out of the people surveyed, Spotify's reccomendations were preferred.
@@ -248,8 +248,13 @@ We did this initially using a MU-LLaMA (Music Understanding Large Language Model
 
 </p>
 <p>
-  However, we ended up using a differnt tool to do audio analysis, Qwen. 
-  This works in much the same way, but gave better results for our purposes.
+  However, we ended up using a differnt model for our audio analysis - QWEN-Audio. 
+  A recent review of the Music Understanding Language Model space cited the QWEN-Audio Model as the current state-of-the-art across most music understanding tasks. 
+  Simply put, QWEN was anecdotally more convenient to use, and more promising than MU-LLaMA. 
+  In combination with its ready availability, this made it our choice for the direct audio analysis portion of our pipeline.  
+  The QWEN-Audio Model analyzes various formats of audio files and accommodates natural language prompting and question-answering regarding the piece’s analysis. 
+  Our pipeline compiles a preprocessed library of song descriptions by analyzing musical audio with QWEN, and prompting it for a list of descriptors that capture the most distinctive and important characteristics of the piece, including genre, mood, and standout musical elements.
+  The way in which QWEN was implmented in our pipeline was almost the exact same as what we had in mind for the MU-LLaMA model.
 </p>
 
 <p>
