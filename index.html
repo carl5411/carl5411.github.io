@@ -92,6 +92,15 @@
             <span>Final Report</span>
             </a>
           </span>
+          <span class="link-block">
+            <a
+              href="https://github.umn.edu/Hart1299/CSCI5541-Project/tree/main"
+              target="_blank"
+              class="external-link button is-normal is-rounded is-dark is-outlined"
+            >
+            <span>Code</span>
+            </a>
+            </span>
           <!-- Demo link -->
           <span class="link-block">
             <a
@@ -103,14 +112,7 @@
             </a>
           </span>
           <!-- Github Link-->
-          <span class="link-block">
-            <a
-              href="https://github.umn.edu/Hart1299/CSCI5541-Project/tree/main"
-              target="_blank"
-              class="external-link button is-normal is-rounded is-dark is-outlined"
-            >
-            <span>Code</span>
-            </a>
+          
           <!-- </span>      
           <span class="link-block">
             <a
@@ -144,7 +146,7 @@
 <p>
   We wanted to create a novel application that would recommend songs and music playlists based on user prompts. 
   While Spotify came out with a similar feature recently, we wanted to create an application that reads into the user's prompt more deeply. 
-  Qwen2-Audio was used to decipher the songs in our datasets and extract musical features. 
+  QWEN-Audio was used to decipher the songs in our datasets and extract musical features. 
   We then used the Gemini API to interpret the human prompts to extract similar features from that, 
   and we also gathered some feedback to help in training the model. 
   Currently, a working demo is available (above) that can take a user prompt and return a song recommendation based on that prompt.
@@ -271,7 +273,7 @@ We did this initially using a MU-LLaMA (Music Understanding Large Language Model
   This being said, since we have our own metric scores along with Spotify's dataset, we should be able to come up with a reasonably effective metric.
   Using human feedback instead of the Spotify dataset is looking to be the way we will go at the moment.
   Either way, we will be trying both options in the hope of finding the best solution.
-  For audio engineering, Qwen is extremely effective, however does have some limitations.
+  For audio engineering, QWEN is extremely effective, however does have some limitations.
   For example, when given audio from popular meme culture, the model depicts a sad violin playing, given it has no cultural context. 
   We have also tried to obtain song lyrics from datasets but found this to not be feasible, so web scraping seems to be our only option.
 </p>
